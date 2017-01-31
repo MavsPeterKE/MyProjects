@@ -43,61 +43,7 @@ public class MainActivity extends Activity {
 		mname=(EditText)findViewById(R.id.mname);
 		lname=(EditText)findViewById(R.id.lname);
 		save=(Button)findViewById(R.id.save);
-		/*
-		save.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View arg0)
-			{
-				// TODO Auto-generated method stub
-				
-				String a=fname.getText().toString();
-				String b=mname.getText().toString();
-				String c=lname.getText().toString();
-				
-			   //Object that will make request to the server
-				AsyncHttpClient client=new AsyncHttpClient();
-				
-				
-				//Object to request parameters that will be sent to the server
-				RequestParams params=new RequestParams();
-				params.put("fname", a);
-				params.put("mname", b); 
-				params.put("lname", c);
-				
-				client.post("http://10.0.2.2/update.php",params, new AsyncHttpResponseHandler() {
-					
-					@Override
-					public void onSuccess(int arg0, Header[] arg1, byte[] response) 
-					{
-						// TODO Auto-generated method stub
-						String serverresponse=new String(response);
-						
-						if(serverresponse.equals("3")){
-							Toast.makeText(getApplicationContext(),"All Details Required",Toast.LENGTH_LONG).show();
-						}else if(serverresponse.equals("2")){
-							Toast.makeText(getApplicationContext(),"Records Already in The Database",Toast.LENGTH_LONG).show();
-						}else if(serverresponse.equals("4"))
-						
-						{Toast.makeText(getApplicationContext(),"Record Saved Successfully",Toast.LENGTH_LONG).show();}
-						
-						else if(serverresponse.equals("5"))
-							
-						{Toast.makeText(getApplicationContext(),"Problem Communicating with server",Toast.LENGTH_LONG).show();}
-						
-					}
-					
-					@Override
-					public void onFailure(int arg0, Header[] arg1, byte[] arg2, Throwable arg3) {
-						// TODO Auto-generated method stub
-						Toast.makeText(getApplicationContext(),"Unable to access server",Toast.LENGTH_LONG).show();
-						
-					}
-				});
-				
-			}
-		});
-		*/
+		
 		save.setOnClickListener(new OnClickListener() {
 			
 			@Override
